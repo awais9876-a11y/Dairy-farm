@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javafx.DairyFarm.MainApp"
+
+      spacing="10"
+      padding="10">
+
+    <!-- TOP SECTION: Search Bar -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Search by ID or Breed:" style="-fx-font-size: 14;"/>
+        <TextField fx:id="searchField"
+                   promptText="Type animal ID or breed..."
+                   prefWidth="300"/>
+    </HBox>
+
+    <!-- MIDDLE SECTION: Table -->
+    <TableView fx:id="animalTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idCol" text="Animal ID" prefWidth="120"/>
+            <TableColumn fx:id="typeCol" text="Type" prefWidth="100"/>
+            <TableColumn fx:id="breedCol" text="Breed" prefWidth="120"/>
+            <TableColumn fx:id="ageCol" text="Age (Years)" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- BOTTOM SECTION: Buttons -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button fx:id="addBtn" text="➕ Add Animal"
+                style="-fx-font-size: 12; -fx-padding: 8;"/>
+        <Button fx:id="editBtn" text="✏️ Edit Animal"
+                style="-fx-font-size: 12; -fx-padding: 8;"/>
+        <Button fx:id="deleteBtn" text="🗑️ Delete Animal"
+                style="-fx-font-size: 12; -fx-padding: 8;"/>
+    </HBox>
+
+</VBox>
